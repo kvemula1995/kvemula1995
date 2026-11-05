@@ -35,7 +35,7 @@ Combines two distinct dimensions into a matrix:
 
 Segments are calculated at a consistent dealer-period grain and snapshots are kept, so upgrades, declines and sustained inactivity are visible over time.
 
-**SQL pattern** (see the [sanitized example](./sql/account_performance_segmentation.sql)): monthly date spine → account-month aggregation → rolling lookback windows → approximate-quantile peer thresholds → rule-based classification, with dbt `ref()` dependencies on governed upstream models.
+**SQL pattern**: monthly date spine → account-month aggregation → rolling lookback windows → approximate-quantile peer thresholds → rule-based classification, with dbt `ref()` dependencies on governed upstream models.
 
 ## Part 2: Churn discovery and scoring
 

@@ -93,7 +93,7 @@ The reviewed dealer-grading SQL is structured as a sequence of transformations r
 | `CASE` expressions | Convert analytical measures into interpretable categories |
 | dbt `ref()` | Express dependencies on upstream modeled datasets |
 
-This is a high-level technical description of the reviewed SQL file, not a claim that every project in this repository used every listed technique.
+This is a high-level technical description of the approach used, not a claim that every project in this repository used every listed technique.
 
 ### Confidentiality boundary
 

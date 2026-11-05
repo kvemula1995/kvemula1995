@@ -29,7 +29,7 @@ I take ambiguous, cross-functional problems and turn them into programs that run
 Led the migration of Sales Ops and Field Analytics reporting into an AI analytics platform: 6 denormalized tables and 24 dashboards rebuilt on a governed dbt layer, so leaders get answers in place of a 2–5 business day request cycle.
 
 **Signal:** AI-enabled delivery · scoping and prioritization · metric governance · access design · quality controls
-**Stack:** dbt · Omni · Tableau · GitHub
+**Stack:** BigQuery · dbt · Omni · Tableau · GitHub
 
 </td>
 <td width="54%"><a href="./ai-analytics-migration/"><img src="./ai-analytics-migration/architecture.svg" alt="AI-enabled analytics delivery architecture"></a></td>

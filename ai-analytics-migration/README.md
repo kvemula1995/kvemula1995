@@ -6,7 +6,7 @@
 |---|---|
 | **Role** | Program lead: scoped and prioritized the migration with data engineers and senior leaders, owned the roadmap, governance model, AI topic setup and quality controls |
 | **Partners** | Data engineers, C-suite and senior leaders, Sales Ops and Field Analytics stakeholders |
-| **Stack** | dbt (SQL + YAML) · Omni (AI analytics platform) · Tableau (source) · GitHub (pull requests and code review) |
+| **Stack** | BigQuery (primary warehouse) · dbt (SQL + YAML) · Omni (AI analytics platform) · Tableau (source) · GitHub (pull requests and code review) |
 | **Scope** | 6 major denormalized data tables · 24 Tableau dashboards |
 | **Timeline** | 2 weeks for the C-suite's high-priority tables; the remainder within the quarter |
 
@@ -33,7 +33,7 @@ C-suite and senior leaders had to submit a request to get Sales Ops and Field An
 | Phase | Work | Exit criterion |
 |---|---|---|
 | 1. Scope | Inventory dashboards and tables with data engineers; agree priorities with senior leaders | Prioritized roadmap, C-suite items first |
-| 2. Build data layer | dbt SQL scripts and YAML for the denormalized tables; core metrics defined once | Tables and metrics reviewed and merged |
+| 2. Build data layer | dbt SQL scripts and YAML on BigQuery for the denormalized tables; core metrics defined once | Tables and metrics reviewed and merged |
 | 3. Enable AI self-serve | AI chat topics per stakeholder outcome; governed access logic by department | Leaders can ask and get answers within their permissions |
 | 4. Validate | Pull request review plus AI autopilot discrepancy detection against existing reporting | Mismatches resolved before release |
 | 5. Deliver | C-suite high-priority tables within 2 weeks; remaining tables and dashboards within the quarter | Priority reporting live, then full migration scope |

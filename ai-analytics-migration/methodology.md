@@ -10,7 +10,7 @@ List every dashboard and underlying table in scope. Rank by who depends on it an
 
 ## 3. Build one governed data layer
 
-Use dbt to express denormalized tables as version-controlled SQL with YAML definitions. Define each core metric once, in that layer, so dashboards and AI chat read the same definition.
+Use dbt on BigQuery, the primary warehouse, to express denormalized tables as version-controlled SQL with YAML definitions. Define each core metric once, in that layer, so dashboards and AI chat read the same definition.
 
 ## 4. Design AI topics around outcomes
 

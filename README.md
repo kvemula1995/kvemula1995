@@ -104,7 +104,7 @@ Insights lead for a Google Ads acquisition program: integrated marketing data in
 
 ---
 
-## What these projects demonstrate (L5/L6 signals)
+## What these projects demonstrate
 
 | Signal | Evidence |
 |---|---|

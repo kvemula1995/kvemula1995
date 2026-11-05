@@ -25,6 +25,18 @@ I take ambiguous, cross-functional problems and turn them into programs that run
 <tr>
 <td width="46%" valign="top">
 
+### [AI-Enabled Analytics Delivery (Tableau to Omni)](./ai-analytics-migration/)
+Led the migration of Sales Ops and Field Analytics reporting into an AI analytics platform: 6 denormalized tables and 24 dashboards rebuilt on a governed dbt layer, so leaders get answers in place of a 2–5 business day request cycle.
+
+**Signal:** AI-enabled delivery · scoping and prioritization · metric governance · access design · quality controls
+**Stack:** dbt · Omni · Tableau · GitHub
+
+</td>
+<td width="54%"><a href="./ai-analytics-migration/"><img src="./ai-analytics-migration/architecture.svg" alt="AI-enabled analytics delivery architecture"></a></td>
+</tr>
+<tr>
+<td width="46%" valign="top">
+
 ### [Hiring Intake & SLA Automation](./workforce-planning-automation/)
 Rebuilt a manual, email-driven hiring-requisition process into an auditable workflow with an owner per stage, automated notifications, stage-level SLA timestamps and a Tableau SLA view.
 
@@ -89,7 +101,7 @@ Insights lead for a Google Ads acquisition program: integrated marketing data in
 </tr>
 </table>
 
-*A supporting analytics engagement outside my core program-management work. Reported outcomes: +300% leads, -83% cost per lead, acquisition cost ~66% below target.*
+*A supporting analytics engagement outside my core program-management work. Reported outcomes: +300% leads, −83% cost per lead, acquisition cost ~66% below target.*
 
 ---
 
@@ -109,8 +121,8 @@ Insights lead for a Google Ads acquisition program: integrated marketing data in
 | Signal | Evidence |
 |---|---|
 | **Scope & ambiguity.** Owns problem definition, not just execution | Framed the adoption-decline problem and the hiring-process problem from symptoms, then defined the target state, KPIs and rollout |
-| **Technical depth.** Credible with engineers and data teams | BigQuery/dbt segmentation patterns; event-driven Apps Script automation; requirements and edge cases for a recommendation engine |
-| **Mechanisms, not heroics.** Builds things that keep working | Stage-level SLA timestamps; metric dictionaries with owners; a recommendation job that runs every morning; a daily inspector-KPI email to the whole field; a churn score refreshed daily; recurring review cadences |
+| **Technical depth.** Credible with engineers and data teams | BigQuery/dbt segmentation patterns; a dbt-to-Omni migration with governed AI access; event-driven Apps Script automation; requirements and edge cases for a recommendation engine |
+| **Mechanisms, not heroics.** Builds things that keep working | Stage-level SLA timestamps; metric dictionaries with owners; a recommendation job that runs every morning; a daily inspector-KPI email to the whole field; a churn score refreshed daily; metrics defined once and reused across AI chat; recurring review cadences |
 | **Influence without authority.** Aligns many orgs | Sales, Operations, HR, Product, Engineering, Analytics and field leadership; dealer turnaround delivered through territory managers and regional sales directors |
 | **Rigor with data.** Careful about causality | Hypothesis backlogs, time-based validation, baselines and comparison groups, explicit assumption labelling |
 | **Risk & dependency management.** De-risks before scaling | Phased delivery, validation against field scenarios, acceptance criteria, repeatable release path |
@@ -122,7 +134,7 @@ Insights lead for a Google Ads acquisition program: integrated marketing data in
 
 ## Toolkit
 
-**Data & analytics:** SQL · BigQuery · dbt · Tableau · Excel / Sheets modeling · forecasting and labor modeling
+**Data & analytics:** SQL · BigQuery · dbt · Omni (AI analytics) · Tableau · Excel / Sheets modeling · forecasting and labor modeling
 **Automation:** Google Apps Script · workflow design · event-driven triggers · GenAI-enabled delivery
 **Program craft:** roadmaps, RACI, risk registers, KPI frameworks, change management, WBR/MBR/QBR governance, Agile delivery
 

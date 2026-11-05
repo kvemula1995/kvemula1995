@@ -15,7 +15,7 @@ I take ambiguous, cross-functional problems and turn them into programs that run
 | | | |
 |:---:|:---:|:---:|
 | **60% → 98%** field-service platform adoption across **800+** inspectors | **56% → 80%** appointment efficiency after recommendation automation | **1–2 months → 24–48 hours** hiring request-to-approval turnaround |
-| **+300%** leads, **−83%** cost per lead in B2B acquisition | **~40% of 2,000+** underperforming dealers returned to target performance | **~145 territories** supported by automated validation instead of manual prep |
+| **5+ business functions** run on the field-ops validation dashboard | **~40% of 2,000+** underperforming dealers returned to target performance | **~145 territories** supported by automated validation instead of manual prep |
 
 ---
 
@@ -70,10 +70,15 @@ Peer-relative dealer segmentation, a hypothesis-led churn program that produced 
 </td>
 <td width="54%"><a href="./dealer-performance-intelligence/"><img src="./dealer-performance-intelligence/architecture.svg" alt="Dealer performance intelligence architecture"></a></td>
 </tr>
+</table>
+
+## Add-on project
+
+<table>
 <tr>
 <td width="46%" valign="top">
 
-### [B2B Customer Acquisition Optimization](./b2b-acquisition-analytics/)
+### [B2B Customer Acquisition Optimization (add-on)](./b2b-acquisition-analytics/)
 Insights lead for a Google Ads acquisition program: integrated marketing data into BigQuery and built the dashboards that raised lead volume and quality while cutting cost per lead.
 
 **Signal:** data integration · funnel measurement · experimentation · data-led resource allocation
@@ -83,6 +88,8 @@ Insights lead for a Google Ads acquisition program: integrated marketing data in
 <td width="54%"><a href="./b2b-acquisition-analytics/"><img src="./b2b-acquisition-analytics/architecture.svg" alt="B2B acquisition optimization architecture"></a></td>
 </tr>
 </table>
+
+*A supporting analytics engagement outside my core program-management work. Reported outcomes: +300% leads, -83% cost per lead, acquisition cost ~66% below target.*
 
 ---
 

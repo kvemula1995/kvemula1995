@@ -1,6 +1,6 @@
 # Dealer Performance & Retention Intelligence
 
-> **A shared way to prioritize dealer accounts:** peer-relative segmentation, a dealer-level churn probability score and daily field communication. Of **2,000+ underperforming dealers** (month-over-month baseline), about **40% returned to target performance** through partnerships run by territory managers and regional sales directors.
+> **A shared way to prioritize dealer accounts:** peer-relative segmentation, a dealer-level churn probability score refreshed daily. Of **2,000+ underperforming dealers** (month-over-month baseline), about **40% returned to target performance** through partnerships run by territory managers and regional sales directors.
 
 | | |
 |---|---|

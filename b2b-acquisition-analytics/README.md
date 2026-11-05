@@ -1,4 +1,6 @@
-# B2B Customer Acquisition Optimization
+# B2B Customer Acquisition Optimization (add-on project)
+
+> *A supporting analytics engagement alongside my core program-management work.*
 
 > **+300% leads, −83% cost per lead, acquisition cost ~66% below target** (reported outcomes) by tightening traffic quality and running a disciplined optimization loop.
 

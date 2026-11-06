@@ -4,38 +4,37 @@
 
 Clarify what field teams need to decide: which accounts to protect, which to develop, and which require a targeted intervention. Avoid building a score without a corresponding action.
 
-## 2. Build a balanced performance view
+## 2. Grade on two independent dimensions
 
-Use two conceptually distinct dimensions:
-- **Relative scale:** compare dealer activity with peers in a comparable market.
-- **Conversion effectiveness:** assess how efficiently available inventory or opportunities translate into completed transactions.
+- **Sales volume (relative):** rank dealers within their own territory on recent sales and split them into tertiles, so territories with different demand levels are compared fairly.
+- **Sell-through rate (absolute):** group dealers using fixed bands applied identically across territories and time, so conversion is judged the same everywhere.
 
-The public methodology intentionally excludes the employer's exact thresholds, peer-group implementation, and proprietary grade mapping.
+Combine the two in a matrix that yields three grades: **A** (top performers), **B** (stable, room to grow) and **E** (conversion inefficiency needing immediate intervention). The public methodology excludes exact thresholds, the lookback window and the full grade rules.
 
-## 3. Create stable time-based segments
+## 3. Run it as a monthly mechanism
 
-Calculate performance at a consistent dealer-period grain. Retain historical snapshots to identify upgrades, declines, and sustained inactivity rather than relying only on the latest period.
+Recalculate monthly at a consistent dealer-period grain, keep snapshots to see upgrades, declines and sustained inactivity, and agree with Sales, Analytics and Ops that the grade is the single source of truth for prioritization.
 
 ## 4. Define early-risk signals
 
 Create an explainable early-disengagement indicator using a recent-activity window followed by a sustained inactivity window. Validate the window lengths against historical behavior before operational use.
 
-## 5. Test churn hypotheses
+## 5. Run four churn-discovery streams in parallel
 
-Triangulate:
-- Field observations and structured reason codes
-- Direct customer feedback
-- Quantitative transaction, inventory, and engagement patterns
+- **Field perspective:** send a monthly churned-dealer list to territory sales leaders to record likely reasons.
+- **Dealer feedback:** have a call-center team ask each long-inactive dealer why they stopped.
+- **Data-driven:** define early churn (recent launch, then a sustained quiet period), convene Sales, Analytics, Logistics and Customer Experience to list assumptions, and test 10+ hypotheses. Distinguish correlation from causation.
+- **Generative AI:** analyze territory manager visit logs to surface and validate trends from the field's own notes.
 
-Form hypotheses with cross-functional stakeholders, test whether the evidence supports them, and distinguish correlation from causation.
+Triangulate the four so no single biased view drives the answer.
 
 ## 6. Translate findings into interventions
 
-Match likely barriers to relevant actions, such as coverage improvements, service recovery, commercial enablement, or win-back outreach. Track assignment, execution, and outcome.
+Match the top churn reasons (competitor loss, thin coverage, poor buy or sell experience) to actions such as guaranteed-sale programs, fee reductions, transportation credits, coverage improvements and win-back outreach. Track assignment, execution, and outcome.
 
 ## 7. Measure impact
 
-Track segment migration, reactivation, incremental units, retention, and fee contribution. Use a defined baseline and comparison approach where feasible; avoid attributing all subsequent activity to a single intervention.
+Track grade migration, reactivation, recovered volume against the baseline of volume lost from churned dealers, retention, and fee contribution. Use a defined baseline and comparison approach where feasible; avoid attributing all subsequent activity to a single intervention.
 
 
 ## Churn hypothesis and feature-discovery process
@@ -68,33 +67,10 @@ Organize candidate hypotheses into feature families:
 The plan separated EDA, action planning and model build. The model build was delivered as a dealer-level churn probability score that also shows which hypothesis-driven factors contribute to each dealer's risk, so field teams can act on the reason, not just the score.
 
 
-## SQL patterns demonstrated
+## Engineering approach
 
-The reviewed dealer-grading SQL is structured as a sequence of transformations rather than one monolithic query. At a high level, the query follows this pattern:
-
-1. **Build a monthly date spine:** Generate month-level evaluation dates and associated historical windows.
-2. **Prepare transaction-level activity:** Join auction activity to relevant dealer and operational context, then aggregate listing and sold outcomes at a dealer and time-period level.
-3. **Create historical performance measures:** Aggregate activity over defined lookback periods to distinguish recent performance from longer-term trends.
-4. **Establish peer-relative thresholds:** Use approximate quantiles within geographic or operating groups to create comparable performance bands.
-5. **Apply classification logic:** Combine sales-volume and sell-through indicators into a consistent dealer-segmentation output.
-6. **Publish a reusable analytical model:** Organize the transformations through dbt model references so downstream reporting can consume a standardized result.
-
-### SQL techniques represented
-
-| Technique | How it is used conceptually |
-|---|---|
-| Common table expressions (CTEs) | Break a complex transformation into readable, testable stages |
-| `GENERATE_DATE_ARRAY` | Build a regular monthly evaluation calendar |
-| Date truncation and date arithmetic | Align activity to monthly periods and construct historical windows |
-| `LEFT JOIN` | Enrich transaction activity with dealer and operational dimensions while retaining the core activity set |
-| `COUNT(DISTINCT ...)` with conditional logic | Calculate unique listing and sold-transaction measures |
-| `SUM` and grouped aggregation | Roll transaction activity up to dealer-period and geography levels |
-| `APPROX_QUANTILES` | Create peer-relative performance thresholds without hard-coding a single universal cutoff |
-| `CASE` expressions | Convert analytical measures into interpretable categories |
-| dbt `ref()` | Express dependencies on upstream modeled datasets |
-
-This is a high-level technical description of the approach used, not a claim that every project in this repository used every listed technique.
+The grading output is built as a sequence of staged, reusable dbt models on BigQuery rather than one monolithic query, so downstream reporting consumes a standardized result.
 
 ### Confidentiality boundary
 
-The original script contains internal model references, exclusion logic, account-specific conditions, date boundaries, and grading rules. Those implementation details are intentionally not reproduced. The public project documents the reusable SQL engineering patterns and analytical approach instead.
+Internal model references, exclusion logic, thresholds, date boundaries and grading rules are intentionally not reproduced.

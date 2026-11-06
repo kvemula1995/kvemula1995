@@ -74,9 +74,9 @@ Owned the KPI framework, capacity-recovery plan, banded incentive campaigns, a d
 <td width="46%" valign="top">
 
 ### [Dealer Performance & Retention Intelligence](./dealer-performance-intelligence/)
-Peer-relative dealer segmentation, a hypothesis-led churn program that produced a dealer-level churn probability score, refreshed daily, built on modular BigQuery/dbt SQL.
+A monthly A/B/E dealer grading framework, a four-stream churn program (field, dealer calls, data, generative AI) and retention programs that recovered roughly a quarter of lost "dark" dealer volume, plus a dealer-level churn probability score refreshed daily.
 
-**Signal:** hypothesis-led problem solving · segmentation and churn modeling · phased analytics delivery · technical depth
+**Signal:** end-to-end ownership · hypothesis-led problem solving · grading and churn modeling · generative AI for field insight · retention program design
 **Stack:** BigQuery · dbt · SQL · Tableau · Salesforce
 
 </td>
